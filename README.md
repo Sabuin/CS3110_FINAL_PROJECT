@@ -26,14 +26,14 @@ For easier understanding, here is a vague overview of the functions of main impo
 |Function Name                        |Function description|
 |-------------------------------------|--------------------|
 |split_to_mini_batches(...))|Splits the data into "mini batches" (creates subsets of the data)|
-|gradient()| calculates the gradient of the logistic loss|
+|gradient()| Calculates the gradient of the logistic loss|
 |gradient_vectorized(...)|Vectorized version of the calculation of the gradient. Vectorization makes it more efficient (especially when working with large datasets)|
-|epsilon_delta_noisy_gradient_descent(...)|mini-batch GD with (ε,δ)-DP using gradient()|
-|vectorized_delta_noisy_gradient_descent(...)|mini-batch GD with (ε,δ)-DP using gradient_vectorized()|
-|mini_batch_noisy_gradient_RDP(...)|mini-batch GD with Rényi-DP using gradient()|
-|vectorized_mini_batch_noisy_gradient_descent_RDP(...)|mini-batch GD with Rényi-DP using gradient_vectorized()|
-|mini_batch_noisy_gradient_descent_zCDP|mini-batch GD with zCDP using gradient()|
-|vectorized_mini_batch_noisy_gradient_descent_zCDP|mini-batch GD with zCDP using gradient_vectorized()|
+|epsilon_delta_noisy_gradient_descent(...)|Mini-batch GD with (ε,δ)-DP using gradient()|
+|vectorized_delta_noisy_gradient_descent(...)|Mini-batch GD with (ε,δ)-DP using gradient_vectorized()|
+|mini_batch_noisy_gradient_RDP(...)|Mini-batch GD with Rényi-DP using gradient()|
+|vectorized_mini_batch_noisy_gradient_descent_RDP(...)|Mini-batch GD with Rényi-DP using gradient_vectorized()|
+|mini_batch_noisy_gradient_descent_zCDP|Mini-batch GD with zCDP using gradient()|
+|vectorized_mini_batch_noisy_gradient_descent_zCDP|Mini-batch GD with zCDP using gradient_vectorized()|
 
 ## Results
 
