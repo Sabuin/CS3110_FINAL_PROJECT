@@ -39,7 +39,7 @@ For easier understanding, here is a vague overview of the functions of main impo
 |mini_batch_noisy_gradient_descent_zCDP|Mini-batch GD with zCDP using gradient()|
 |vectorized_mini_batch_noisy_gradient_descent_zCDP|Mini-batch GD with zCDP using gradient_vectorized()|
 
-## Batch Gradient Implementation (Hailey Schoppe)
+**Batch Gradient Implementation (Hailey Schoppe)**
 
 Batch gradient descent uses the entire training set to compute the gradients at each step, meaning it updates the model parameters after processing the entire training set. In each iteration, the gradient of the function is calculated based on the training examples, and the parameters are updated to minimize the prediction error. 
 
