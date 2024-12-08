@@ -16,7 +16,7 @@ TODO:
 
 When calculating gradient descent as an optimization technique for machine learning training models, batch and mini-batch gradient descent have distinct tradeoffs in terms of accuracy and efficiency. Additionally, to maintain the privacy of the training data, various methods of differential privacy can be used to add noise and protect the data. These include epsilon differential privacy with laplace, epsilon-delta differential privacy with gaussian mechanism, Renyi differential privacy (RDP) using the Renyi divergence and a gaussian renyi algorithm, and Zero Concentrated differential privacy (zCDP), also using gaussian. 
 
-We will be testing whether batch or mini batch gradient descent has a better base accuracy, as well as which maintains higher accuracy while adding noise to the data through differential privacy. Furthermore, we will test which combination of differential privacy algorithm and gradient descent function produces the highest accuracies, and at which values of inputs such as batch size, epsilon and delta (for epsilon-delta DP), epsilon_bar and alpha (for RDP), or rho (for zCDP).
+We will be testing whether batch or mini-batch gradient descent has a better base accuracy, as well as which maintains higher accuracy while adding noise to the data through differential privacy. Furthermore, we will test which combination of differential privacy algorithm and gradient descent function produces the highest accuracies, and at which values of inputs such as batch size, epsilon and delta (for epsilon-delta DP), epsilon_bar and alpha (for RDP), or rho (for zCDP).
 
 
 **Solution**
@@ -27,19 +27,23 @@ It is important to highlight that although we have included epsilon-DP in our an
 
 
 **Mini-batch gradient Descent Implementation (Sasha J. Abuin)**
-Since there are many functions being defined and implemented, here is a vague overview of the functions of main importance
+Mini-batch gradient descent is a variant of the gradient descent algorithm, that instead of calculating the gradient of the loss function with respect to the entire data set, it does it for subsets of the data. Splitting the data into subsets is known as “mini-batches”, thus the name of the algorithm. It can be said that this variant is a combination of stochastic gradient descent and batch gradient descent. 
 
-|Function Name                        |Function description|
-|-------------------------------------|--------------------|
-|split_to_mini_batches(...))|Splits the data into "mini batches" (creates subsets of the data)|
-|gradient()| Calculates the gradient of the logistic loss|
-|gradient_vectorized(...)|Vectorized version of the calculation of the gradient. Vectorization makes it more efficient (especially when working with large datasets)|
-|epsilon_delta_noisy_gradient_descent(...)|Mini-batch GD with (ε,δ)-DP using gradient()|
-|vectorized_delta_noisy_gradient_descent(...)|Mini-batch GD with (ε,δ)-DP using gradient_vectorized()|
-|mini_batch_noisy_gradient_RDP(...)|Mini-batch GD with Rényi-DP using gradient()|
-|vectorized_mini_batch_noisy_gradient_descent_RDP(...)|Mini-batch GD with Rényi-DP using gradient_vectorized()|
-|mini_batch_noisy_gradient_descent_zCDP|Mini-batch GD with zCDP using gradient()|
-|vectorized_mini_batch_noisy_gradient_descent_zCDP|Mini-batch GD with zCDP using gradient_vectorized()|
+There are many advantages to using mini-batch gradient descent, but it has its disadvantages too. Below is a table that explores the strengths and weaknesses of this algorithm: 
+|Advantages|Disadvantages|
+|----------|-------------|
+|Model parameters get updated more frequently, thus leading to faster convergence if the batch size parameter is properly set|Can be less accurate than batch gradient descent at times|
+|Performs well with big datasets|Tradeoff between fast convergence and noisy updates|
+|Can provide better accuracy if compared to Stochastic Gradient Descent|Have to pick “learning rate” hyperparameter.
+|Parameter updates can be less noisy if the batch size parameter is properly set|We have to pick the value for the “batch_size” hyperparameter. If too small: higher variance when updating parameters. If too big: slower convergence|
+
+For calculating the gradient loss, we opted to use the vectorized version provided to us, which is important for utility and provides faster execution. 
+For the implementation of the algorithm, five steps were taken:
+1. Define a function that splits data into mini-batches (subsets of the whole dataset) 
+2. Define the loss function that measures how good our model is (original function taken from in-class exercises)
+3. Define the vectorized version of the gradient function. The gradient is a vector that indicates the rate of change of the loss in each direction (Implementation taken from project feedback; check citations section)
+4. Define an avg_grad function that computes the average gradient over each mini-batch (original function taken from in-class exercises)
+5. Define gradient_descent function that computes gradient using mini-batches for each iteration with the different variants of differential privacy (modified versions of functions provided in in-class exercises) 
 
 **Batch Gradient Implementation (Hailey Schoppe)**
 
