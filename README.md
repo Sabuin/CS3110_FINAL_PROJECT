@@ -21,11 +21,13 @@ We will be testing whether batch or mini batch gradient descent has a better bas
 
 **Solution**
 
-To tackle our problem, we have decided to compare full-batch gradient descent and mini-batch gradient descent algorithms with all of the variants of differential privacy that have been studied this semester. More specifically we compared full-batch gradient descent and mini-batch gradient descent algorithms for epsilon-DP, (epsilon, delta)-DP, Rényi-DP, and zCDP.
+To tackle our problem, we have decided to compare full-batch gradient descent and mini-batch gradient descent algorithms with all of the variants of differential privacy that have been studied this semester. More specifically we compared full-batch gradient descent and mini-batch gradient descent algorithms for epsilon-DP, (epsilon, delta)-DP, Rényi-DP, and zCDP. We have also added comparisons between non-vectorized and vectorized calculations of the gradients. 
 
-We have also added comparisons between non-vectorized and vectorized calculations of the gradients. 
+It is important to highlight that although we have included epsilon-DP in our analysis, in practice it should not be used in this area. The reason for this is that in machine learning we have to iterate over big datasets in order to apply differential privacy, meaning that the privacy cost would be too big. 
 
-For easier understanding, here is a vague overview of the functions of main importance in our implementation:
+
+**Mini-batch gradient Descent Implementation (Sasha J. Abuin)**
+Since there are many functions being defined and implemented, here is a vague overview of the functions of main importance
 
 |Function Name                        |Function description|
 |-------------------------------------|--------------------|
