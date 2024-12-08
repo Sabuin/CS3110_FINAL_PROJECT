@@ -63,3 +63,12 @@ The process of adding noise is marginally different for epsilon-delta, Renyi, an
 
 
 ## Citations
+[1] A. Agrawall, "Mini-batch Gradient Descent," Inside Learning Machines, [Online]. Available: https://insidelearningmachines.com/mini_batch_gradient_descent/.
+
+[2] A. Agrawall, "Batch vs Stochastic vs Mini-batch Gradient Descent Techniques," Medium, 2-May-2020. [Online]. Available: https://medium.com/@amannagrawall002/batch-vs-stochastic-vs-mini-batch-gradient-descent-techniques-7dfe6f963a6f.
+
+[3]J. Near, "CS3110 Data Privacy Exercises," University of Vermont, GitHub, [Online]. Available: https://github.com/jnear/cs3110-data-privacy/tree/main/exercises.
+
+[3] S. Sunblaze, "Logistic Regression in DPML Benchmark," GitHub, [Online]. Available: https://github.com/sunblaze-ucb/dpml-benchmark/blob/master/lossfunctions/logistic_regression.py#L12.
+
+
