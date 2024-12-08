@@ -14,14 +14,14 @@ TODO:
 
 **Problem Statement**
 
-When calculating gradient descent as an optimization technique for machine learning training models, batch and mini-batch gradient descent have distinct tradeoffs in terms of accuracy and efficiency. Additionally, to maintain the privacy of the training data, various methods of differential privacy can be used to add noise and protect the data. These include epsilon differential privacy with laplace, epsilon-delta differential privacy with gaussian mechanism, Renyi differential privacy (RDP) using the Renyi divergence and a gaussian renyi algorithm, and Zero Concentrated differential privacy (zCDP), also using gaussian. 
+When calculating gradient descent as an optimization technique for machine learning training models, batch and mini-batch gradient descent have distinct tradeoffs in terms of accuracy and efficiency. Additionally, to maintain the privacy of the training data, various methods of differential privacy can be used to add noise and protect the data. These include epsilon-delta differential privacy with gaussian mechanism, Renyi differential privacy (RDP) using the Renyi divergence and a gaussian renyi algorithm, and Zero Concentrated differential privacy (zCDP), also using gaussian. 
 
 We will be testing whether batch or mini-batch gradient descent has a better base accuracy, as well as which maintains higher accuracy while adding noise to the data through differential privacy. Furthermore, we will test which combination of differential privacy algorithm and gradient descent function produces the highest accuracies, and at which values of inputs such as batch size, epsilon and delta (for epsilon-delta DP), epsilon_bar and alpha (for RDP), or rho (for zCDP).
 
 
 **Solution**
 
-To tackle our problem, we have decided to compare full-batch gradient descent and mini-batch gradient descent algorithms with all of the variants of differential privacy that have been studied this semester. More specifically we compared full-batch gradient descent and mini-batch gradient descent algorithms for epsilon-DP, (epsilon, delta)-DP, Rényi-DP, and zCDP. We have also added comparisons between non-vectorized and vectorized calculations of the gradients. 
+To tackle our problem, we have decided to compare full-batch gradient descent and mini-batch gradient descent algorithms with the variants of differential privacy that have been studied this semester. More specifically we compared full-batch gradient descent and mini-batch gradient descent algorithms for (epsilon, delta)-DP, Rényi-DP, and zCDP. We have also added comparisons between non-vectorized and vectorized calculations of the gradients. 
 
 **Mini-batch gradient Descent Implementation (Sasha J. Abuin)**
 
