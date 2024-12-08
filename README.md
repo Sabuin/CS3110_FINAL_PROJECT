@@ -43,7 +43,7 @@ There are many advantages to using mini-batch gradient descent, but it has its d
 
 |Advantages|Disadvantages|
 |----------|-------------|
-|Model parameters get updated more frequently, thus leading to faster convergence if the batch size parameter is properly set|Can be less accurate than batch gradient descent at times|
+|Model parameters get updated more frequently, thus leading to faster convergence if the batch size parameter is properly set|Can be less accurate than batch gradient descent depending on the dataset|
 |Performs well with big datasets|Tradeoff between fast convergence and noisy updates|
 |Can provide better accuracy if compared to Stochastic Gradient Descent|Have to pick “learning rate” hyperparameter.
 |Parameter updates can be less noisy if the batch size parameter is properly set|We have to pick the value for the “batch_size” hyperparameter. If too small: higher variance when updating parameters. If too big: slower convergence|
