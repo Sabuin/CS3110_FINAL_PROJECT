@@ -26,6 +26,7 @@ We will be testing whether batch or mini-batch gradient descent has a better bas
 To tackle our problem, we have decided to compare full-batch gradient descent and mini-batch gradient descent algorithms with all of the variants of differential privacy that have been studied this semester. More specifically we compared full-batch gradient descent and mini-batch gradient descent algorithms for epsilon-DP, (epsilon, delta)-DP, Rényi-DP, and zCDP. We have also added comparisons between non-vectorized and vectorized calculations of the gradients. 
 
 **Mini-batch gradient Descent Implementation (Sasha J. Abuin)**
+
 Mini-batch gradient descent is a variant of the gradient descent algorithm, that instead of calculating the gradient of the loss function with respect to the entire data set, it does it for subsets of the data. Splitting the data into subsets is known as “mini-batches”, thus the name of the algorithm. It can be said that this variant is a combination of stochastic gradient descent and batch gradient descent. 
 
 There are many advantages to using mini-batch gradient descent, but it has its disadvantages too. Below is a table that explores the strengths and weaknesses of this algorithm: 
