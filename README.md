@@ -6,6 +6,7 @@
 * GD: gradient descent
 * zCDP: zero-concentrated differential privacy
 * RDP: Rényi differential privacy
+* BGD: (full) batch gradient descent
   
 ## Problem Statement and Solution
 
