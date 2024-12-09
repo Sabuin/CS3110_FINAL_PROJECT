@@ -56,7 +56,25 @@ For the implementation of the algorithm, five steps were taken:
 5. Define gradient_descent function that computes gradient using mini-batches for each iteration with the different variants of differential privacy (modified versions of functions provided in in-class exercises)
    
 ## Results
+The table below shows the average accuracy for 20 runs of each implementation. The values of our privacy parameters and hyperparameters are the following:
+* Epsilon = 1.0
+* Delta = 1e^-5
+* Epsilon_bar = 0.1
+* Alpha = 20
+* Rho = 1
+* Learning rate for batch-GD = 1
+* Learning rate for mini-batch-GD = 0.01
+* Batch size (mini-batch-GD only) = 64
 
+||Batch-GD|Mini-Batch-GD|
+|-|-------|-------------|
+|(Epsilon,Delta)-DP|0.4780904467049978|0.7285106147722247|
+|Rényi-DP|0.5123949579831933|0.8061311366651924|
+|zCDP|0.630827067669173|0.8177797434763379|
+
+*In the code, for each implementation we have tested various values as parameters for differential privacy*
+
+Overall, we can see that mini-batch GD has provided more accurate results overall, with the highest accuracy coming from zCDP. This could be for multiple reasons, as for the combinations of hyperparameters. However, mini-batch also has the advantage of the parameters being updated more frequently, which could result in better accuracy and less noise being added during the calculation of the gradients. 
 
 ## Citations
 [1] A. Agrawall, "Mini-batch Gradient Descent," Inside Learning Machines, [Online]. Available: https://insidelearningmachines.com/mini_batch_gradient_descent/.
