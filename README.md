@@ -76,6 +76,8 @@ Overall, we can see that mini-batch GD has provided more accurate results overal
 
 ## Link to video presentation
 
+https://drive.google.com/file/d/1in08itrYWqitcc_6dR1un_RhIbGEF_SQ/view?usp=sharing
+
 ## Citations
 [1] A. Agrawall, "Mini-batch Gradient Descent," Inside Learning Machines, [Online]. Available: https://insidelearningmachines.com/mini_batch_gradient_descent/.
 
