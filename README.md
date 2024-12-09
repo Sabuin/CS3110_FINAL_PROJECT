@@ -74,6 +74,8 @@ The table below shows the average accuracy for 20 runs of each implementation. T
 
 Overall, we can see that mini-batch GD has provided more accurate results overall, with the highest accuracy coming from zCDP. This could be for multiple reasons, as for example the combinations of hyperparameters. However, mini-batch GD also has the advantage of the parameters being updated more frequently, which could result in better accuracy and less noise being added during the calculation of the gradients. 
 
+## Link to video presentation
+
 ## Citations
 [1] A. Agrawall, "Mini-batch Gradient Descent," Inside Learning Machines, [Online]. Available: https://insidelearningmachines.com/mini_batch_gradient_descent/.
 
