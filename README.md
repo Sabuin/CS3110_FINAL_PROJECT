@@ -5,6 +5,7 @@
 * DP: differential privacy
 * GD: gradient descent
 * zCDP: zero-concentrated differential privacy
+* RDP: Rényi differential privacy
   
 ## Problem Statement and Solution
 
